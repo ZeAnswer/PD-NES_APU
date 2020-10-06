@@ -1,0 +1,8 @@
+#N canvas 410 295 641 511 12;
+#X obj 162 144 smetro;
+#X obj 162 191 outlet;
+#X obj 39 52 loadbang;
+#X msg 153 104 344;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;

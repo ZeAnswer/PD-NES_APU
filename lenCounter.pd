@@ -1,0 +1,61 @@
+#N canvas 2895 314 710 579 12;
+#X obj 178 456 tgl 15 1 empty empty chanEnable 17 7 0 10 -262144 -1
+-1 0 1;
+#X floatatom 123 383 5 0 63 0 len - -;
+#X floatatom 189 41 5 0 63 0 lenLoad - -;
+#X obj 363 99 bng 15 250 50 0 empty empty trigger 17 7 0 10 -262144
+-1 -1;
+#X obj 9 214 loadbang;
+#X obj 133 7 bng 15 250 50 0 empty empty dec_len 17 7 0 10 -262144
+-1 -1;
+#X obj 451 51 tgl 15 0 empty empty lenEnable 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 60 108 spigot;
+#X obj 120 341 incdec;
+#X obj 182 258 spigot;
+#X obj 177 509 outlet;
+#X obj 82 5 inlet;
+#X obj 229 38 inlet;
+#X obj 407 42 inlet;
+#X obj 292 4 inlet;
+#X text 502 116 *5bit lenLoad;
+#X text 502 100 *bang clk_256;
+#X text 502 129 *bang trigger;
+#X text 502 141 *toggle Enable;
+#X obj 167 297 spigot;
+#X obj 337 8 tgl 15 0 empty empty trigger 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 151 161 +;
+#X obj 266 99 select 1;
+#X msg 8 247 0;
+#X obj 145 196 expr 63 - $f1;
+#X msg 270 151 1;
+#X obj 332 209 == 0;
+#X obj 138 419 > 0;
+#X connect 0 0 9 1;
+#X connect 0 0 10 0;
+#X connect 1 0 27 0;
+#X connect 2 0 21 1;
+#X connect 4 0 23 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 9 0;
+#X connect 8 0 1 0;
+#X connect 9 0 19 0;
+#X connect 11 0 7 0;
+#X connect 12 0 21 1;
+#X connect 13 0 7 1;
+#X connect 14 0 22 0;
+#X connect 14 0 26 0;
+#X connect 19 0 8 2;
+#X connect 20 0 22 0;
+#X connect 20 0 26 0;
+#X connect 21 0 24 0;
+#X connect 22 0 21 0;
+#X connect 22 0 25 0;
+#X connect 23 0 8 0;
+#X connect 24 0 8 0;
+#X connect 25 0 0 0;
+#X connect 26 0 19 1;
+#X connect 27 0 0 0;
+#X coords 0 -1 1 1 110 75 1 500 85;
